@@ -1,0 +1,217 @@
+/* RESET AND BASE STYLES */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333333;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* MAIN CONTAINER WRAPPER */
+.cv-container{
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /*Creates even vertical spacing between every card*/
+}
+
+/* THE SHARED CARD LOOK FOR PICTURE 3 */
+.cv-card{
+    background-color: #eef2f7;
+    border: 2px solid #b0c4de;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+/* HEADER CARD SPECIFIC FLEXBOX  CONFIGURATION*/
+.header-card{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+/* CICULAR PROFILE FRAME WITH INNER WRAPPER BORDER */
+.profile-frame{
+    width: 150px;
+    height: 150px;
+   border-radius:50% ;
+   border: 4px solid #004080;
+   overflow: hidden;
+   flex-shrink: 0;
+}
+
+.profile-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* TEXT TYPOGRAPHY STYLING */
+.header-info h1{
+    color: #1a365d;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.header-info h2{
+    color: #2b6cb0;
+    font-size: 20px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.header-info p, .cv-card p{
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 6px;
+}
+.cv-card h3{
+    color: #1a365d;
+    font-size: 22px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.01);
+    padding-bottom: 4px;
+}
+
+/* EXPERIENCE & EDUCATION PLACEMENT */
+.entry{
+    margin-bottom: 20px;
+}
+
+.entry:last-child{
+    margin-bottom: 0;
+}
+.entry-title{
+    color: #2b6cb0;
+    font-size: 17px;
+    font-weight: 600;
+}
+.entry-subtitle{
+    font-weight: 500;
+    color: #4a5568;
+}
+
+.entry-date{
+    font-size: 13px;
+    color: #718096;
+    margin-bottom: 8px;
+}
+
+.entry-list,.skills-list, .cert-list{
+    margin-left: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.entry-list li, .skills-list li, .cert-list li{
+    margin-bottom: 6px;
+}
+
+/* STATUS BADGE */
+.status-badge{
+    background-color: #cbd5e0;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-left: 6px;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+/* PORTFOLIO GRID AND ITEMS */
+.portfolio-intro{
+    margin-bottom: 16px;
+}
+
+.portfolio-grid{
+    display: flex;
+    gap: 16px;/*Space between the two project cards*/
+    margin-bottom: 16px;
+}
+
+.portfolio-item{
+    flex: 1;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    overflow: hidden;/*Keeps the image corners rounded inside the card*/
+    flex-direction: column;
+}
+
+.portfolio-item img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #cbd5e0;
+}
+
+.project-info{
+    padding: 12px;
+}
+
+.project-info h4{
+    color: #2b6cb0;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.project-info p{
+    font-size: 13px;
+    color: #4a5568;
+    margin: 0;
+}
+
+/* YELLOW HIGHLIGHT BOX */
+.portfolio-note{
+    background-color: #fef3c7;
+    border-left: 4px solid #d97706;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 0 4px 4px 0;
+}
+
+/* ENSURE RESPONSIVENESS ON SMALL SCREENS/PHONES */
+@media (max-width: 600px){
+    .portfolio-grid {
+        flex-direction:column ;
+    }
+}
+/* REferences & ACTION BUTTONS */
+.reference-card{
+    position: relative;
+}
+
+.btn-contact{
+    margin-top: 12px;
+    background-color: #2b6cb0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+.btn-contact:hover{
+    background-color: #1a365d;
+}
+
+/* MOBILE RESPONSIVE STYLING */
+@media(max-width:600px){
+    .header-card{
+        flex-direction: column;
+        text-align: center;
+    }
+    .grid-two-col{
+        grid-template-columns: 1fr;
+    }
+}
